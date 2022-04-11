@@ -7,7 +7,7 @@ from .models import Post
 
 class PostList(generic.ListView):
     """
-    view for index.html
+    view code
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
