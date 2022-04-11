@@ -25,12 +25,21 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
 
     class Meta:
+        """
+        ordering
+        """
         ordering = ['-created_on']
 
     def __str__(self):
+        """
+        string title
+        """
         return self.title
 
     def number_of_likes(self):
+        """
+        return likes count
+        """
         return self.likes.count()
 
 
@@ -47,6 +56,9 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        """
+        ordering
+        """
         ordering = ['created_on']
 
     def __str__(self):
