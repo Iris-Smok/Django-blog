@@ -32,6 +32,8 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
 ALLOWED_HOSTS = ['iris-codestar2022.herokuapp.com', 'localhost']
 
 
